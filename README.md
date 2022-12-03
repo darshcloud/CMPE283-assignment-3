@@ -22,7 +22,7 @@ The environment setup (steps to build kernel and inner VM setup) is same as done
 `sudo apt-get install fakeroot build-essential ncurses-dev xz-utils libssl-dev bc flex libelf-dev bison`
 * Copy the existing configuration using the command<br/>
 `cp -v /boot/config-$(uname -r) .config`
-* run the below command to compile and build the kernel<br/>
+* Run the below command to compile and build the kernel<br/>
 `make -j $nproc` <br/>
 if you encounter error "No rule to make target 'debian/canonical-certs.pem"
 then disable securities certificate by using<br/>
@@ -31,7 +31,7 @@ then disable securities certificate by using<br/>
 `sudo make INSTALL_MOD_STRIP=1 modules_install`
 * Run the below command to install the kernel<br/>
 `sudo make install`
-* Reboot and verify the kernel version by running the command<br/>
+* Reboot and verify the kernel version by running the below command<br/>
 `uname -mrs`
 
 ### Inner VM Setup
@@ -55,4 +55,4 @@ then disable securities certificate by using<br/>
 
 ### Output
 
-## Questions
+## Answers for Questions

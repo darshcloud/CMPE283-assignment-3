@@ -12,7 +12,7 @@ when special CPUID leaf nodes are requested.
 ### Professor's Name: Michael Larkin <br/>
 ### Submitted By: Darshini Venkatesha Murthy Nag <br/>
 ### Student ID: 016668951 <br/>
-### Linux kernel Source code Working tree: <br/> Please refer https://github.com/darshcloud/linux.git for the complete working tree which i forked from the master linux kernel repo to complete the assignment
+### Linux kernel Source code Working tree: <br/> Please refer https://github.com/darshcloud/linux.git for the complete working tree which i forked from the master linux kernel repo and built the kernel to complete the assignment
 
 ## Steps used to complete the assignment
 The environment setup (steps to build kernel and inner VM setup) is same as done in assignment 2
@@ -67,9 +67,6 @@ then disable securities certificate by using<br/>
 `sudo modprobe kvm_intel` <br/>
 
 
-
-
-### Output
 
 ## Answers for Questions
 

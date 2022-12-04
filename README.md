@@ -12,12 +12,12 @@ when special CPUID leaf nodes are requested.
 ### Professor's Name: Michael Larkin <br/>
 ### Submitted By: Darshini Venkatesha Murthy Nag <br/>
 ### Student ID: 016668951 <br/>
-### Linux kernel Source code Working tree: <br/> Please refer https://github.com/darshcloud/linux.git for the complete working tree
+### Linux kernel Source code Working tree: <br/> Please refer https://github.com/darshcloud/linux.git for the complete working tree which i forked from the master linux kernel repo to complete the assignment
 
 ## Steps used to complete the assignment
 The environment setup (steps to build kernel and inner VM setup) is same as done in assignment 2
 ### Steps to build kernel:
-* Fork the linux kernel source repository https://github.com/torvalds/linux.git and clone it
+* Fork the linux kernel source code repository https://github.com/torvalds/linux.git and clone it
 * Install the dependencies using the below command <br/>
 `sudo apt-get install fakeroot build-essential ncurses-dev xz-utils libssl-dev bc flex libelf-dev bison`
 * Copy the existing configuration using the command<br/>
@@ -49,6 +49,22 @@ then disable securities certificate by using<br/>
 * Build the test code inside the inner VM to test the changes made in the Outer VM kvm module.
 
 ### Code Modification in Kernel source code
+* Code changes for this assignment are built on top of assignment 2 changes
+* Added assignment functionality for building the leaf functions 0x4ffffffe and 0x4fffffff
+* Added 2 Global variables exit_frequency and cycles_in_exit
+* In vmx.c, Implemented the changes for calculating the exit frequency
+  and total time spent processing each exit in the vmx_handle_exit function
+* In cpuid.c, created 2 new cpuid leaf in kvm_emulate_cpuid function which reads the
+  exit_frequency of an exit into % eax when eax = 0x4ffffffe, ecx = <exit number> and moves the high 32 bits of cycles_in_exit into %ebx and low 32 bits
+  of cycles_in_exit into %ecx when % eax = 0x4fffffff, ecx = <exit number>
+* Compile the code using the below command<br/>
+  `make -j $nproc modules`
+* To install the built modules run the below command<br/>
+  `sudo make INSTALL_MOD_STRIP=1 modules_install && make install`
+* Run the below commands to reload the KVM module <br/>
+`sudo rmmod kvm_intel ` <br/>
+`sudo rmmod kvm` <br/>
+`sudo modprobe kvm_intel` <br/>
 
 
 

@@ -72,7 +72,7 @@ then disable securities certificate by using<br/>
 
 
 
-## Answers for Questions
+## Output and Answers for Questions
 
 3. Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there
 more exits performed during certain VM operations? Approximately how many exits does a full VM

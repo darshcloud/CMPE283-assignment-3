@@ -7,7 +7,11 @@ when special CPUID leaf nodes are requested.
 * For CPUID leaf node %eax=0x4FFFFFFF:<br/>
   Return the time spent processing the exit number provided (on input) in %ecx<br/>
   Return the high 32 bits of the total time spent for that exit in %ebx<br/>
-  Return the low 32 bits of the total time spent for that exit in %ecx
+  Return the low 32 bits of the total time spent for that exit in %ecx <br/>
+  
+  For leaf nodes 0x4FFFFFFE and 0x4FFFFFFF, if %ecx (on input) contains a value not defined by the
+  SDM, return 0 in all %eax, %ebx, %ecx registers and return 0xFFFFFFFF in %edx. For exit types not
+  enabled in KVM, return 0s in all four registers.
 
 ### Professor's Name: Michael Larkin <br/>
 ### Submitted By: Darshini Venkatesha Murthy Nag <br/>

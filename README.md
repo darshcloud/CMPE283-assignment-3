@@ -75,8 +75,37 @@ then disable securities certificate by using<br/>
 
 3. Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there
 more exits performed during certain VM operations? Approximately how many exits does a full VM
-boot entail?
+boot entail?<br/>
+  Answer: The frequency of the exits do not increase at a stable rate. As you can see in the below screenshot exits shot up at much difference rate each time i ran the   program and also while running other applications in the background. More exits are performed when i run different applications and open multiple browser windows.
+  As per the below screenshotsfull VM boot entails ~ 300000 exits
 
+Before Boot
+
+![VM_boot_entail](https://user-images.githubusercontent.com/111547793/205483894-cfa4e997-7a2c-4752-aa67-f6610112a82e.png)
+
+After Boot
+
+![VM_after_Reboot](https://user-images.githubusercontent.com/111547793/205483900-ca0487f7-4056-4399-bf8d-fef28102892d.png)
 
 4. Of the exit types defined in the SDM, which are the most frequent? Least?
+From the screenshots shown below we can see that
+
+Most Frequent Exits are <br/>
+Exit 48 - EPT Violation <br/>
+Exit 32 - WRMSR <br/>
+Exit 10 - CPUID <br/>
+Exit 1 - External Interrupt <br/>
+Exit 30 - I/O instruction <br/>
+
+
+Least Frequent Exits are
+Exit 55 - XSETBV
+Exit 54 - WBINVD
+Exit 29 - MOV DR
+
+![exit_frequency_list](https://user-images.githubusercontent.com/111547793/205484143-3736b5d9-ecbc-4274-913b-5a8e41361cce.png)
+![exit_frequency_list_1](https://user-images.githubusercontent.com/111547793/205484147-57246598-0858-48df-a95a-989bb4768c4b.png)
+![exit_frequency_list_2](https://user-images.githubusercontent.com/111547793/205484152-18267518-b8de-4db0-853d-868c2a7da27a.png)
+![exit_frequency_list_3](https://user-images.githubusercontent.com/111547793/205484154-97d501ef-85d8-492e-afb2-b4264a24bb69.png)
+
 

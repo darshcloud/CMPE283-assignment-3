@@ -52,11 +52,11 @@ then disable securities certificate by using<br/>
 * Code changes for this assignment are built on top of assignment 2 changes
 * Added assignment functionality for building the leaf functions 0x4ffffffe and 0x4fffffff
 * Added 2 Global variables exit_frequency and cycles_in_exit
-* In vmx.c, Implemented the changes for calculating the exit frequency
+* In vmx.c, implemented the changes for calculating the exit frequency
   and total time spent processing each exit in the vmx_handle_exit function
 * In cpuid.c, created 2 new cpuid leaf in kvm_emulate_cpuid function which reads the
-  exit_frequency of an exit into % eax when eax = 0x4ffffffe, ecx = <exit number> and moves the high 32 bits of cycles_in_exit into %ebx and low 32 bits
-  of cycles_in_exit into %ecx when % eax = 0x4fffffff, ecx = <exit number>
+  exit_frequency of an exit into % eax when eax = 0x4ffffffe, ecx = exit number and moves the high 32 bits of cycles_in_exit into %ebx and low 32 bits
+  of cycles_in_exit into %ecx when % eax = 0x4fffffff, ecx = exit number
 * Compile the code using the below command<br/>
   `make -j $nproc modules`
 * To install the built modules run the below command<br/>
@@ -72,3 +72,11 @@ then disable securities certificate by using<br/>
 ### Output
 
 ## Answers for Questions
+
+3. Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there
+more exits performed during certain VM operations? Approximately how many exits does a full VM
+boot entail?
+
+
+4. Of the exit types defined in the SDM, which are the most frequent? Least?
+

@@ -91,6 +91,7 @@ After Boot
 From the screenshots shown below we can see that
 
 Most Frequent Exits are <br/>
+
 Exit 48 - EPT Violation <br/>
 Exit 32 - WRMSR <br/>
 Exit 10 - CPUID <br/>
@@ -98,10 +99,11 @@ Exit 1 - External Interrupt <br/>
 Exit 30 - I/O instruction <br/>
 
 
-Least Frequent Exits are
-Exit 55 - XSETBV
-Exit 54 - WBINVD
-Exit 29 - MOV DR
+Least Frequent Exits are<br/>
+
+Exit 55 - XSETBV<br/>
+Exit 54 - WBINVD<br/>
+Exit 29 - MOV DR<br/>
 
 ![exit_frequency_list](https://user-images.githubusercontent.com/111547793/205484143-3736b5d9-ecbc-4274-913b-5a8e41361cce.png)
 ![exit_frequency_list_1](https://user-images.githubusercontent.com/111547793/205484147-57246598-0858-48df-a95a-989bb4768c4b.png)

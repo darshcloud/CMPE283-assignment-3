@@ -79,7 +79,7 @@ then disable securities certificate by using<br/>
   boot entail?<br/>
 
   Answer: The frequency of the exits do not increase at a stable rate. As you can see in the below screenshot exits shot up at much difference rate each time i ran the   program and also while running other applications in the background. More exits are performed when i run different applications and open multiple browser windows.
-  As per the below screenshotsfull VM boot entails ~ 300000 exits
+  As per the below screenshotsfull VM boot entails ~ 3200000 exits
 
 Before Boot
 
